@@ -29,9 +29,10 @@ const buildTimeline = (
     const t = periodIndex / n;
     const compoundFactor = (1 + rPerN) ** (n * t);
     const base = principal * compoundFactor;
+    // 월초 적립 방식: 적립금이 해당 기간 전체에 대해 이자 발생
     const contributionPart =
       recurringAmount > 0 && rPerN > 0
-        ? recurringAmount * ((compoundFactor - 1) / rPerN)
+        ? recurringAmount * ((compoundFactor - 1) / rPerN) * (1 + rPerN)
         : recurringAmount * n * t;
 
     const total = base + contributionPart;
@@ -74,9 +75,10 @@ export const calculatePredictMode = (input: PredictModeInput): PredictResult => 
   const compoundFactor = (1 + rPerN) ** (totalPeriods);
   const base = principal * compoundFactor;
 
+  // 월초 적립 방식: 적립금이 해당 기간 전체에 대해 이자 발생
   const contributionPart =
     recurringAmount > 0 && rPerN > 0
-      ? recurringAmount * ((compoundFactor - 1) / rPerN)
+      ? recurringAmount * ((compoundFactor - 1) / rPerN) * (1 + rPerN)
       : recurringAmount * totalPeriods;
 
   const finalAmount = base + contributionPart;
