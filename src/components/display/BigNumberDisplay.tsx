@@ -55,7 +55,14 @@ const BigNumberDisplay = ({
     };
 
     return (
-      <div className="rounded-xl bg-white border border-slate-200 p-4">
+      <div className="rounded-xl bg-white border border-slate-200 p-4 space-y-4">
+        {/* 투자기간 - 메인 결과 */}
+        <div className="space-y-1 pb-3 border-b border-slate-200">
+          <p className="text-xs text-slate-600">목표 달성 기간</p>
+          <p className="text-2xl font-bold text-emerald-600">{durationText}</p>
+        </div>
+        
+        {/* 나머지 결과 - 2x2 그리드 */}
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-1">
             <p className="text-xs text-slate-600">총투자결과</p>
