@@ -35,7 +35,7 @@ const GoalModeForm = ({
         suffix="원"
         value={goalAmount}
         min={1_000_000}
-        max={5_000_000_000}
+        max={10_000_000_000}
         step={1_000_000}
         onChangeValue={onChangeGoalAmount}
       />
@@ -45,7 +45,7 @@ const GoalModeForm = ({
         suffix="원"
         value={principal}
         min={0}
-        max={100_000_000}
+        max={1_000_000_000}
         step={100_000}
         onChangeValue={onChangePrincipal}
       />
