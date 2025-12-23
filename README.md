@@ -29,8 +29,23 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 배포 (Deployment)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Netlify 배포
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+이 프로젝트는 Netlify에 배포하도록 설정되어 있습니다.
+
+자세한 배포 가이드는 [DEPLOYMENT.md](./DEPLOYMENT.md)를 참고하세요.
+
+**빠른 배포:**
+1. GitHub에 코드 푸시
+2. [Netlify](https://www.netlify.com/)에 로그인
+3. "Add new site" → "Import an existing project" → GitHub 저장소 선택
+4. 빌드 설정은 `netlify.toml` 파일이 자동으로 적용됩니다
+5. "Deploy site" 클릭
+
+### Vercel 배포 (대안)
+
+Next.js를 만든 Vercel에서도 배포할 수 있습니다:
+- [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+- [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying)
